@@ -1,0 +1,51 @@
+@import '../../../styles/variables';
+
+.card {
+    margin-bottom: 20px;
+    border-radius: .25rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px 0 rgba(255, 255, 0, 0.5);
+    border: 1px solid rgba(255, 255, 0, 0.1);
+    display: flex;
+    justify-content: center;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.content-container {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 80%;
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $text-white;
+    text-align: center;
+    height: 100px;
+}
+
+.card-description {
+    font-size: 1rem;
+    color: $text-white;
+    font-family: "Roboto", sans-serif;
+    text-align: left;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.card-text {
+    color: #c5c5c5;
+    font-size: .8rem;
+}

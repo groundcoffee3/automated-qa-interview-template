@@ -1,0 +1,16 @@
+<div class="search-container">
+  <app-button></app-button>
+  <app-search (searchText)="updateSearchText($event)"></app-search>
+</div>
+<div>
+  <div *ngIf="!filmsLoading" class="films-container">
+    @for(film of filteredFilms(); track film) {
+    <app-film-item [film]="film"></app-film-item>
+    }
+  </div>
+  <div *ngIf="filmsLoading" class="skeleton-container">
+    <app-skeleton></app-skeleton>
+    <app-skeleton></app-skeleton>
+    <app-skeleton></app-skeleton>
+  </div>
+</div>
