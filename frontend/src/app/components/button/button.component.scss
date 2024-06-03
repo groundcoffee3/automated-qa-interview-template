@@ -1,0 +1,20 @@
+@import '../../../styles/variables';
+
+.btn {
+    background-color: $primary-color;
+    color: black;
+    border-radius: 5px;
+    font-family: $primary-font;
+    padding: 10px 20px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover:not(:disabled) {
+    background-color: #FFC107;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+    cursor: pointer;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+}

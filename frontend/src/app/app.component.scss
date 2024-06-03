@@ -1,0 +1,30 @@
+$stars: 500;
+// 80% width and flexbox centering
+.container {
+    width: 80%;
+    margin: auto;
+    margin-top: 1.5rem;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stars {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: transparent;
+    $shadows: (
+    );
+
+@for $i from 1 through $stars {
+    $x: random(2000) + 0px;
+    $y: random(2000) + 60px;
+    $shadows: append($shadows, $x $y #FFF, comma);
+}
+
+box-shadow: $shadows;
+}

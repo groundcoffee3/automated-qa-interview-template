@@ -4,9 +4,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    AppComponent,
+    ButtonComponent
+  ],
   imports: [
     BrowserModule,
     HttpClientModule,

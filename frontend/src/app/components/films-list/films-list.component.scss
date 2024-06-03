@@ -1,0 +1,28 @@
+@import '../../../styles/variables';
+
+// grid that displays 3 films cards per row on desk top, and one film card per row on mobile
+
+.search-container {
+  display: flex;
+  justify-content: left;
+  margin-top: 1rem;
+}
+.films-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin-top: 1rem;
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.skeleton-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin-top: 1rem;
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
