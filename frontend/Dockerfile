@@ -1,4 +1,4 @@
-# Use the official Node.js 14 image.
+# Use the official Node.js 18 image.
 # https://hub.docker.com/_/node
 FROM node:18
 
@@ -10,7 +10,7 @@ WORKDIR /usr/src/app
 # Copying this separately prevents re-running npm install on every code change.
 COPY package*.json ./
 
-# Install production dependencies.
+# Install all dependencies including dev dependencies for testing.
 RUN npm install --only=production
 
 # Copy local code to the container image.
@@ -19,6 +19,9 @@ COPY . .
 RUN rm -rf node_modules
 RUN rm package-lock.json
 RUN npm install
+
+# Expose the application port
+EXPOSE 4200
 
 # Run the web service on container startup.
 CMD [ "npm", "start" ]
